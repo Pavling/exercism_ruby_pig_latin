@@ -3,7 +3,7 @@ class PigLatin
   class << self
     def translate(word)
       @word = word.to_s
-      @word.gsub!(/(.)(.*)/, '\2\1') unless begins_with_vowel?
+      move_consonant_sound unless begins_with_vowel?
       "#{@word}ay"
     end
 
@@ -11,5 +11,9 @@ class PigLatin
       %w(a e i o u).include? @word[0]
     end
 
+    private
+    def move_consonant_sound
+      @word.gsub!(/(ch|.)(.*)/, '\2\1')
+    end
   end
 end
