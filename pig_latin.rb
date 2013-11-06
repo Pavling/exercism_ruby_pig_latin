@@ -16,6 +16,7 @@ class PigLatin
       rules_for_first_sound = [
         "[^aeiou]qu", #consonant followed by "qu" sound'
         "thr",
+        "sch",
         "th",
         "ch",
         "qu",
