@@ -13,7 +13,13 @@ class PigLatin
 
     private
     def move_consonant_sound
-      @word.gsub!(/(ch|qu|.)(.*)/, '\2\1')
+      rules_for_first_sound = [
+        "[^aeiou]qu", #consonant followed by "qu" sound'
+        "ch",
+        "qu",
+        "." #finally, any other characher
+      ]
+      @word.gsub!(%r((#{rules_for_first_sound.join("|")})(.*)), '\2\1')
     end
   end
 end

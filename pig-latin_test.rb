@@ -28,7 +28,6 @@ class PigLatinTest < MiniTest::Unit::TestCase
   end
 
   def test_word_with_consonant_preceding_qu
-    skip
     assert_equal "aresquay", PigLatin.translate("square")
   end
 
