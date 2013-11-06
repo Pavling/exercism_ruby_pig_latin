@@ -15,6 +15,7 @@ class PigLatin
     def move_consonant_sound
       rules_for_first_sound = [
         "[^aeiou]qu", #consonant followed by "qu" sound'
+        "th",
         "ch",
         "qu",
         "." #finally, any other characher

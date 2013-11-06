@@ -32,7 +32,6 @@ class PigLatinTest < MiniTest::Unit::TestCase
   end
 
   def test_word_beginning_with_th
-    skip
     assert_equal "erapythay", PigLatin.translate("therapy")
   end
 
