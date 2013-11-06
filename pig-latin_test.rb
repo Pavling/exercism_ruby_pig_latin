@@ -24,7 +24,6 @@ class PigLatinTest < MiniTest::Unit::TestCase
   end
 
   def test_word_beginning_with_qu
-    skip
     assert_equal "eenquay", PigLatin.translate("queen")
   end
 

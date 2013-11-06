@@ -13,7 +13,7 @@ class PigLatin
 
     private
     def move_consonant_sound
-      @word.gsub!(/(ch|.)(.*)/, '\2\1')
+      @word.gsub!(/(ch|qu|.)(.*)/, '\2\1')
     end
   end
 end
